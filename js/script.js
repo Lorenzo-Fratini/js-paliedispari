@@ -1,10 +1,13 @@
 function es1(){
 
   function isPalindrom(str){
-    var reverseStr = str.split( '' ).reverse( ).join( '' );
+    var reverseStr = str.toLowerCase().split( '' ).reverse( ).join( '' );
+
+    // fa diventare tutti i caratteri della stringa minuscoli
+    // var strLower = str.toLowerCase()
 
     // trasforma la stringa in un array di caratteri
-    // var strArr = str.split( '' );
+    // var strArr = strLower.split( '' );
 
     // inverte l'ordine degli elementi dell'array
     // var strArrRev = strArr.reverse( );
@@ -19,8 +22,9 @@ function es1(){
     }
   }
 
-  var str = 'aba';
-  var string = isPalindrom(str);
+  var str = 'Tenet';
+  var lowerStr = str.toLowerCase();
+  var string = isPalindrom(lowerStr);
 
   if(string){
     console.log(str + ' è palindromo');
@@ -84,5 +88,5 @@ function es2(){
   }
 }
 
-// es1();
-es2();
+es1();
+// es2();
