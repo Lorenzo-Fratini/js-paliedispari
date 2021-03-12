@@ -1,26 +1,45 @@
-function es1(){
+function isPalindrom(str){
+  var reverseStr = str.toLowerCase().split( '' ).reverse( ).join( '' );
 
-  function isPalindrom(str){
-    var reverseStr = str.toLowerCase().split( '' ).reverse( ).join( '' );
+  // fa diventare tutti i caratteri della stringa minuscoli
+  // var strLower = str.toLowerCase()
 
-    // fa diventare tutti i caratteri della stringa minuscoli
-    // var strLower = str.toLowerCase()
+  // trasforma la stringa in un array di caratteri
+  // var strArr = strLower.split( '' );
 
-    // trasforma la stringa in un array di caratteri
-    // var strArr = strLower.split( '' );
+  // inverte l'ordine degli elementi dell'array
+  // var strArrRev = strArr.reverse( );
 
-    // inverte l'ordine degli elementi dell'array
-    // var strArrRev = strArr.reverse( );
+  // trasforma gli elementi dell'arrey in una stringa concatenandoli
+  // var reverseStr = strArrRev.join( '' );
 
-    // trasforma gli elementi dell'arrey in una stringa concatenandoli
-    // var reverseStr = strArrRev.join( '' );
-
-    if (str == reverseStr){
-      return true;
-    } else {
-      return false;
-    }
+  if (str == reverseStr){
+    return true;
+  } else {
+    return false;
   }
+}
+
+// Numero random tra max e min
+function getRnd(min, max){
+
+var minRnd = min;
+var maxRnd = max - minRnd + 1;
+
+var rnd = parseInt(Math.floor(Math.random() * maxRnd) + minRnd);
+return rnd;
+}
+
+// Verifico se il numero è pari o dispari
+function isEven(value){
+  if (value % 2 == 0){
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function es1(){
 
   var str = 'Tenet';
   var lowerStr = str.toLowerCase();
@@ -34,25 +53,6 @@ function es1(){
 }
 
 function es2(){
-
-  // Numero random tra max e min
-  function getRnd(min, max){
-
-  var minRnd = min;
-  var maxRnd = max - minRnd + 1;
-
-  var rnd = parseInt(Math.floor(Math.random() * maxRnd) + minRnd);
-  return rnd;
-  }
-
-  // Verifico se il numero è pari o dispari
-  function isEven(value){
-    if (value % 2 == 0){
-      return true;
-    } else {
-      return false;
-    }
-  }
 
   var oddEven = prompt('Scegli pari o dispari');
 
@@ -80,13 +80,13 @@ function es2(){
   console.log(sum + ' è pari ' + sumIsEven);
 
   if (sumIsEven && oddEven == 'pari') {
-    console.log('Hai vinto');
+    console.log('Hai vinto!');
   } else if (sumIsEven == false && oddEven == 'dispari') {
-    console.log('Hai vinto');
+    console.log('Hai vinto!');
   } else {
-    console.log('Hai perso');
+    console.log('Hai perso!');
   }
 }
 
-es1();
-// es2();
+// es1();
+es2();
